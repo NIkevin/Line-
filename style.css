@@ -1,0 +1,107 @@
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    margin: 20px;
+    background: #f9fafc;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  #uploadArea {
+    border: 2px dashed #4CAF50;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  #uploadArea:hover {
+    background: #f0fff4;
+  }
+  
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  #previewArea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .preview-wrapper {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .preview-wrapper img {
+    max-width: 150px;
+    border-radius: 5px;
+  }
+  
+  .preview-wrapper input[type="checkbox"] {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .preview-wrapper button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #e74c3c;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  
+  .preview-wrapper button:hover {
+    background: #c0392b;
+  }
+  
+  /* Spinner */
+  #spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #4CAF50;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+  }
+  
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>LINE 貼圖裁切工具</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- JSZip 與 FileSaver -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+  <h1>LINE 貼圖裁切工具</h1>
+
+  <!-- 裁切方式選擇 -->
+  <div>
+    <label>裁切方式：</label>
+    <select id="cutMode">
+      <option value="2x2">2x2</option>
+      <option value="3x3">3x3</option>
+      <option value="custom">自訂比例</option>
+    </select>
+    <input type="number" id="rows" placeholder="行數" min="1">
+    <input type="number" id="cols" placeholder="列數" min="1">
+  </div>
+
+  <!-- 上傳圖片 -->
+  <div id="uploadArea">
+    <input type="file" id="imageUpload" multiple accept="image/*">
+    <p>拖放或點擊以上傳圖片</p>
+  </div>
+
+  <!-- 主圖片與縮圖 -->
+  <div>
+    <label>主要圖片 (main.png)：</label>
+    <input type="file" id="mainUpload" accept="image/*"><br>
+    <label>聊天室縮圖 (tab.png)：</label>
+    <input type="file" id="tabUpload" accept="image/*">
+  </div>
+
+  <!-- 操作按鈕 -->
+  <button id="processBtn">處理所有圖片</button>
+  <button id="downloadBtn">下載貼圖格式</button>
+
+  <!-- 顯示結果 -->
+  <div id="previewArea"></div>
+
+  <!-- Spinner -->
+  <div id="spinner"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
